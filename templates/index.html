@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h1>Audio Book</h1>
+
+<p>Give pdf and we will give you audio</p>
+
+<form method="post" enctype='multipart/form-data'>
+  
+  <input type="file" name="pdf"><br><br>
+  <button type="submit" formaction="/convert">Text Conversion</button>
+  <button type="submit" formaction="/audio">Audio</button>
+</form>
+<br><br>
+{% if conversion %}
+<h2>{{ conversion }}</h2>
+{% endif %}
+</center>
+</body>
+</html>
